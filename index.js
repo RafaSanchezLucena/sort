@@ -1,5 +1,7 @@
 const botonOrdenar = document.querySelector("#boton1");
 const botonDesordenar = document.querySelector("#boton2");
+const botonGuardar = document.querySelector(".botonGuardar");
+const seleccion = document.querySelector(".selector")
 const uno = document.querySelector("#uno");
 const dos = document.querySelector("#dos");
 const tres = document.querySelector("#tres");
@@ -48,8 +50,10 @@ let array = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ];
 
+let velocidad = 0;
+
 const crearCubos = (array) => {
-  // Se asigna a los cubos los valores del array "lista".
+  // Se asigna a los cubos los valores del array.
   for (let i = 0; i < array.length; i++) {
     cubos[i].innerHTML = array[i];
   }
@@ -79,7 +83,7 @@ const ralentizar = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 500);
+    }, velocidad);
   });
 };
 
@@ -94,8 +98,8 @@ const ordenarLista = async () => {
         crearCubos(lista);
         for (let indice = 0; indice < lista.length; indice++) {
           lista[indice] === array[indice]
-            ? (cubos[indice].className = "ordenado")
-            : (cubos[indice].className = "cubo");
+            ? (cubos[indice].className = "ordenado") // Cambia el color del cubo si la posición es correcta.
+            : (cubos[indice].className = "cubo"); // Mantiene el color blanco si la posición no es la correcta.
         }
       }
     }
@@ -105,3 +109,25 @@ const ordenarLista = async () => {
 botonOrdenar.addEventListener("click", () => {
   ordenarLista();
 });
+
+// Mediante esta función elegimos la velocidad de ejecución del algoritmo.
+const velocidadAlgoritmo = () => {
+  velocidad = seleccion.value;
+  switch(velocidad) {
+    case "muyAlta":
+      velocidad = 50;
+      break;
+    case "alta":
+      velocidad = 100;
+      break;
+    case "media":
+      velocidad = 250;
+      break;
+    default:
+      velocidad = 500;
+  }
+};
+
+botonGuardar.addEventListener("click", () => {
+  velocidadAlgoritmo();
+})

@@ -1,58 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nuevo proyecto</title>
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body>
-    <header>
-      <div class="menu">
-        <div class="logo">
-          <h1>Sort Array</h1>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Métodos Sort</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="menu">
+      <div class="logo">
+        <h1>Sort Methods</h1>
       </div>
-    </header>
-    <div class="contenedorPrincipal">
-      <div class="contenedorCubos">
-        <div id="uno" class="cubo"></div>
-        <div id="dos" class="cubo"></div>
-        <div id="tres" class="cubo"></div>
-        <div id="cuatro" class="cubo"></div>
-        <div id="cinco" class="cubo"></div>
-        <div id="seis" class="cubo"></div>
-        <div id="siete" class="cubo"></div>
-        <div id="ocho" class="cubo"></div>
-        <div id="nueve" class="cubo"></div>
-        <div id="diez" class="cubo"></div>
-        <div id="once" class="cubo"></div>
-        <div id="doce" class="cubo"></div>
-        <div id="trece" class="cubo"></div>
-        <div id="catorce" class="cubo"></div>
-        <div id="quince" class="cubo"></div>
-        <div id="dieciseis" class="cubo"></div>
-        <div id="diecisiete" class="cubo"></div>
-        <div id="dieciocho" class="cubo"></div>
-        <div id="diecinueve" class="cubo"></div>
-        <div id="veinte" class="cubo"></div>
+      <div class="contenedorSelect">
+        <form class="formulario">
+          <label class="etiquetaVelocidad" for="">Velocidad:</label>
+          <select class="selector" name="velocidad">
+            <option class="opcion" value="muyAlta">Muy Alta</option>
+            <option class="opcion" value="alta">Alta</option>
+            <option class="opcion" value="media">Media</option>
+            <option class="opcion" value="baja">Baja</option>
+          </select>
+          <input class="botonGuardar" type="button" value="Guardar">
+        </form>
       </div>
-      <div class="contenedorBotones">
-        <a href="#" id="boton1" class="botonOrdenar">Ordenar</a>
-        <a href="#" id="boton2" class="botonDesordenar">Desordenar</a>
-      </div>
-      <div class="contenedorTexto">
-        <h2>Definición:</h3>
+    </div>
+  </header>
+  <div class="contenedorPrincipal">
+    <div class="contenedorCubos">
+      <div id="uno" class="cubo"></div>
+      <div id="dos" class="cubo"></div>
+      <div id="tres" class="cubo"></div>
+      <div id="cuatro" class="cubo"></div>
+      <div id="cinco" class="cubo"></div>
+      <div id="seis" class="cubo"></div>
+      <div id="siete" class="cubo"></div>
+      <div id="ocho" class="cubo"></div>
+      <div id="nueve" class="cubo"></div>
+      <div id="diez" class="cubo"></div>
+      <div id="once" class="cubo"></div>
+      <div id="doce" class="cubo"></div>
+      <div id="trece" class="cubo"></div>
+      <div id="catorce" class="cubo"></div>
+      <div id="quince" class="cubo"></div>
+      <div id="dieciseis" class="cubo"></div>
+      <div id="diecisiete" class="cubo"></div>
+      <div id="dieciocho" class="cubo"></div>
+      <div id="diecinueve" class="cubo"></div>
+      <div id="veinte" class="cubo"></div>
+    </div>
+    <div class="contenedorBotones">
+      <a href="#" id="boton1" class="botonOrdenar">Ordenar</a>
+      <a href="#" id="boton2" class="botonDesordenar">Desordenar</a>
+    </div>
+    <div class="contenedorTexto">
+      <h2>Definición de Ordenamiento de Burbuja:</h3>
         <span class="texto">El ordenamiento de burbuja (Bubble Sort) funciona revisando cada elemento</span><br>
         <span class="texto">de una lista que va a ser ordenada con el siguiente, intercambiándolos de</span><br>
         <span class="texto">posición si están en el orden equivocado.</span>
 
-      </div>
     </div>
-    <!-- Lodash -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
-    <!-- Javascript -->
-    <script src="/index.js"></script>
-  </body>
+  </div>
+  <!-- Lodash -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <!-- Javascript -->
+  <script src="/index.js"></script>
+</body>
+
 </html>
