@@ -1,6 +1,5 @@
 const botonOrdenar = document.querySelector("#boton1");
 const botonDesordenar = document.querySelector("#boton2");
-const botonGuardar = document.querySelector(".botonGuardar");
 const seleccion = document.querySelector(".selector")
 const uno = document.querySelector("#uno");
 const dos = document.querySelector("#dos");
@@ -50,7 +49,7 @@ let array = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ];
 
-let velocidad = 0;
+let velocidad = 250;
 
 const crearCubos = (array) => {
   // Se asigna a los cubos los valores del array.
@@ -128,6 +127,7 @@ const velocidadAlgoritmo = () => {
   }
 };
 
-botonGuardar.addEventListener("click", () => {
-  velocidadAlgoritmo();
+
+seleccion.addEventListener("change", (e) => {
+  velocidadAlgoritmo(e.target.value);
 })
