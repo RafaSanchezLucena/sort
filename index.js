@@ -60,6 +60,8 @@ const crearCubos = (array) => {
 
 crearCubos(array);
 
+var lista = [];
+
 const desordenarCubos = () => {
   // Cada vez que desordenamos los cubos, asignamos la clase "cubo" a todos los elementos.
   for (let indice = 0; indice < array.length; indice++) {
@@ -90,7 +92,7 @@ const ordenarLista = async () => {
   for (let i = 0; i < lista.length - 1; i++) {
     for (let j = 0; j < lista.length - 1; j++) {
       if (lista[j] > lista[j + 1]) {
-        valorTemporal = lista[j];
+        let valorTemporal = lista[j];
         lista[j] = lista[j + 1];
         lista[j + 1] = valorTemporal;
         await ralentizar();
@@ -112,7 +114,7 @@ botonOrdenar.addEventListener("click", () => {
 // Mediante esta función elegimos la velocidad de ejecución del algoritmo.
 const velocidadAlgoritmo = () => {
   velocidad = seleccion.value;
-  switch(velocidad) {
+  switch (velocidad) {
     case "muyAlta":
       velocidad = 50;
       break;
