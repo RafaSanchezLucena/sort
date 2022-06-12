@@ -140,22 +140,5 @@ h2 {
   height: 20px;
   margin-left: 10px;
   border-radius: 3px;
-  borde: none;
-}
-
-.botonGuardar {
-  margin-left:10px;
-  cursor: pointer;
-  border-radius: 3px;
-  font-size: 15px;
-  width: 70px;
-  height: 20px;
-  border-radius: 5px;
   border: none;
-}
-
-
-.botonGuardar:active {
-  background:#000;
-  color:#fff;
 }
