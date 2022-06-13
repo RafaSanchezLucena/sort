@@ -49,7 +49,6 @@ let array = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ];
 
-let velocidad = 250;
 
 const crearCubos = (array) => {
   // Se asigna a los cubos los valores del array.
@@ -66,10 +65,9 @@ const desordenarCubos = () => {
   // Cada vez que desordenamos los cubos, asignamos la clase "cubo" a todos los elementos.
   for (let indice = 0; indice < array.length; indice++) {
     cubos[indice].className = "cubo";
-  }
-
+  };
   lista = _.shuffle(array); // Desordena la lista de números
-
+  
   // Se reasigna los valores a los cubos que nos da el array "lista".
   for (let i = 0; i < lista.length; i++) {
     cubos[i].innerHTML = lista[i];
@@ -111,8 +109,10 @@ botonOrdenar.addEventListener("click", () => {
   ordenarLista();
 });
 
-// Mediante esta función elegimos la velocidad de ejecución del algoritmo.
-const velocidadAlgoritmo = () => {
+// Iniciamos el valor de la velocidad de ejecución del algoritmo en 250
+// y a continuación la podemos cambiar a través del elemento "select". 
+let velocidad = 250;
+seleccion.addEventListener("change", () => {
   velocidad = seleccion.value;
   switch (velocidad) {
     case "muyAlta":
@@ -127,9 +127,4 @@ const velocidadAlgoritmo = () => {
     default:
       velocidad = 500;
   }
-};
-
-
-seleccion.addEventListener("change", (e) => {
-  velocidadAlgoritmo(e.target.value);
 })
